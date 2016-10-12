@@ -1,19 +1,19 @@
 package com.juliazubets.utils.convertors;
 
 public class PrimitiveConvertor {
-    /*
+
     public char floatToChar(float float_variable_name){
-        char char_variable_name = float_variable_name;
+        char char_variable_name = (char) float_variable_name;
         System.out.println("Input float value is " + float_variable_name + ". Output char value is " + char_variable_name);
         return char_variable_name;
     }
 
     public char intToChar (int int_variable_name){
-        char char_variable_name = int_variable_name;
+        char char_variable_name = (char) int_variable_name;
         System.out.println("Input int value is " + int_variable_name + ". Output char value is " + char_variable_name);
         return char_variable_name;
     }
-    */
+
 
     public int charToInt (char char_variable_name){
         int int_variable_name = char_variable_name;
