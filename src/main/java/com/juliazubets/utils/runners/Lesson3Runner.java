@@ -8,11 +8,11 @@ import com.juliazubets.utils.convertors.PrimitiveConvertor;
 public class Lesson3Runner {
     public static void main (String args[]){
         PrimitiveConvertor convertor = new PrimitiveConvertor();
-        char Variable3 = 'w';
-        int Variable2 = 188;
-        float Variable1 = 119.0f;
-        convertor.charToInt(Variable3);
-        convertor.intToChar(Variable2);
-        convertor.floatToChar(Variable1);
+        char charVariable = 'w';
+        int intVariable = 188;
+        float floatVariable = 119.0f;
+        convertor.charToInt(charVariable);
+        convertor.intToChar(intVariable);
+        convertor.floatToChar(floatVariable);
     }
 }

@@ -2,22 +2,22 @@ package com.juliazubets.utils.convertors;
 
 public class PrimitiveConvertor {
 
-    public char floatToChar(float float_variable_name){
-        char char_variable_name = (char) float_variable_name;
-        System.out.println("Input float value is " + float_variable_name + ". Output char value is " + char_variable_name);
-        return char_variable_name;
+    public char floatToChar(float floatVariableName){
+        char charVariableName = (char) floatVariableName;
+        System.out.println("Input float value is " + floatVariableName + ". Output char value is " + charVariableName);
+        return charVariableName;
     }
 
-    public char intToChar (int int_variable_name){
-        char char_variable_name = (char) int_variable_name;
-        System.out.println("Input int value is " + int_variable_name + ". Output char value is " + char_variable_name);
-        return char_variable_name;
+    public char intToChar (int intVariableName){
+        char charVariableName = (char) intVariableName;
+        System.out.println("Input int value is " + intVariableName + ". Output char value is " + charVariableName);
+        return charVariableName;
     }
 
 
-    public int charToInt (char char_variable_name){
-        int int_variable_name = char_variable_name;
-        System.out.println("Input char value is " + char_variable_name + ". Output int value is " + int_variable_name);
-        return int_variable_name;
+    public int charToInt (char charVariableName){
+        int intVariableName = charVariableName;
+        System.out.println("Input char value is " + charVariableName + ". Output int value is " + intVariableName);
+        return intVariableName;
     }
 }
