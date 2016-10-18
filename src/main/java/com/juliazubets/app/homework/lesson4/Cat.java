@@ -11,7 +11,10 @@ public class Cat {
             isHappy = true;
         }
         if (food > 1) {
-            return "Ого, как много еды";
+            return "Yeah";
+        }
+        if (food > 0 && food < 0.5) {
+            return "I want more!!!";
         }
 
         return "";

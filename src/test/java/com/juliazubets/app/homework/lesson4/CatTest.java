@@ -28,16 +28,30 @@ public class CatTest {
         Assert.assertEquals(false, bob.isHappy);
     }
     @Test
-    public void goodMoodTest() {
+    public void goodMoodTest1() {
         Cat bob = new Cat();
         bob.feeding(0.5);
         Assert.assertEquals(true, bob.isHappy);
     }
     @Test
+    public void goodMoodTest2() {
+        Cat bob = new Cat();
+        bob.feeding(0.6);
+        Assert.assertEquals(true, bob.isHappy);
+    }
+
+    @Test
     public void catTalkingTest() {
         Cat bob = new Cat();
         String catWords = bob.feeding(2);
-        Assert.assertEquals("Ого, как много еды", catWords);
+        Assert.assertEquals("Yeah", catWords);
+        Assert.assertEquals(true, bob.isHappy);
+    }
+    @Test
+    public void catAngryTalkingTest() {
+        Cat bob = new Cat();
+        String catWords = bob.feeding(0.3);
+        Assert.assertEquals("I want more!!!", catWords);
     }
 
 }

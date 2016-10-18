@@ -1,4 +1,4 @@
-package com.juliazubets.utils.convertors;
+package com.juliazubets.app.utils.convertors;
 
 public class PrimitiveConvertor {
 
