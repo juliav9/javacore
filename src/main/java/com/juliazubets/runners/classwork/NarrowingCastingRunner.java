@@ -1,4 +1,6 @@
-package com.juliazubets.app.classwork.lesson3;
+package com.juliazubets.runners.classwork;
+
+import com.juliazubets.app.classwork.lesson3.NarrowingCasting;
 
 /**
  * Created by julia on 10/8/2016.
