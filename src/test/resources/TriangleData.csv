@@ -1,0 +1,6 @@
+boolean expRes, double a, double b, double c
+true,3,4,5
+false,1,2,3
+false,3,4.8888,7.7
+false,0,4.8888,7.7
+true,0,0,0

@@ -1,0 +1,6 @@
+double area1, double area2, String expRes
+1,2,Area2 > area1
+2,1,Area1 > area2
+1,1,Area1 = area2
+-1,0,Area2 > area1
+-1,-2,Area1 > area2

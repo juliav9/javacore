@@ -1,0 +1,5 @@
+int argA, int argB, int expOut
+2,2,4
+3,3,9
+4,5,20
+8,8,64

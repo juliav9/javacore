@@ -1,25 +1,30 @@
 package com.juliazubets.app.homework.lesson4;
 
+import junitparams.FileParameters;
+import junitparams.JUnitParamsRunner;
+import junitparams.mappers.CsvWithHeaderMapper;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 /**
  * Created by julia on 10/14/2016.
  */
+@RunWith(JUnitParamsRunner.class)
 public class CatTest {
+
     @Test
-    public void feedingTest() {
+    @FileParameters(value = "src/test/resources/CatFeedingData.csv", mapper = CsvWithHeaderMapper.class)
+    public void feedingTest1(double food, boolean expRes) {
         Cat bob = new Cat();
-        bob.feeding(0.5);
-        Assert.assertEquals(false, bob.isActive);
+        Assert.assertEquals(expRes, bob.feeding(food));
     }
+
     @Test
-    public void weightTest() {
+    @FileParameters(value = "src/test/resources/CatWeightData.csv", mapper = CsvWithHeaderMapper.class)
+    public void weightTest(double weight, double food, double expRes) {
         Cat bob = new Cat();
-        bob.weight = 4;
-        double food = 0.5, expRes = 4.5;
-        bob.feeding(food);
-        Assert.assertEquals(expRes, bob.weight, 0.0);
+       Assert.assertEquals(expRes, bob.catWeight(weight, food), 0.0);
     }
     @Test
     public void badMoodTest() {
@@ -41,17 +46,10 @@ public class CatTest {
     }
 
     @Test
-    public void catTalkingTest() {
+    @FileParameters(value = "src/test/resources/CatTalkData.csv", mapper = CsvWithHeaderMapper.class)
+    public void catTalkingTest(double food, String expRes) {
         Cat bob = new Cat();
-        String catWords = bob.feeding(2);
-        Assert.assertEquals("Yeah", catWords);
-        Assert.assertEquals(true, bob.isHappy);
+        Assert.assertEquals(expRes, bob.talking(food));
     }
-    @Test
-    public void catAngryTalkingTest() {
-        Cat bob = new Cat();
-        String catWords = bob.feeding(0.3);
-        Assert.assertEquals("I want more!!!", catWords);
-    }
-
+   
 }

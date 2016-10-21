@@ -1,0 +1,6 @@
+int number, boolean expRes
+2,false
+3,true
+0,false
+-2,false
+44875535,true
