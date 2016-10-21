@@ -51,5 +51,5 @@ public class CatTest {
         Cat bob = new Cat();
         Assert.assertEquals(expRes, bob.talking(food));
     }
-   
+
 }

@@ -19,17 +19,17 @@ public class ArraySorterTest {
 //Assume that with the same input data each method should have some specific results
 // in practice difference between sorting methods is time, but we will use earthier solution
 
-        private static final String INPUT_DATA = "C:\\projects\\javacore\\src\\test\\java\\com\\juliazubets\\app\\classwork\\lesson6\\input.txt";
-        private static final String EXPECTED_RESULTS = "C:\\projects\\javacore\\src\\test\\java\\com\\juliazubets\\app\\classwork\\lesson6\\expected.txt";
+        private static final String INPUT_DATA = "src/test/resources/input.txt";
+        private static final String EXPECTED_RESULTS = "src/test/resources/expected.txt";
         private static int[] inputData = null;
         private static int[] expectedResults = null;
         @BeforeClass //input data the same for all tests
         public static void preConditionsForClass() throws IOException {
-           inputData = readTheFile(EXPECTED_RESULTS);
+           inputData = readTheFile(INPUT_DATA);
         }
         @Before
         public void preConditionsForTest() throws IOException {
-            expectedResults = readTheFile(INPUT_DATA);
+            expectedResults = readTheFile(EXPECTED_RESULTS);
         }
         @Test
         public void aFirstTest() { //because tests in alphabetical order we use 'a', 'b' to order tests
