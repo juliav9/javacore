@@ -24,7 +24,7 @@ public class CatTest {
     @FileParameters(value = "src/test/resources/CatWeightData.csv", mapper = CsvWithHeaderMapper.class)
     public void weightTest(double weight, double food, double expRes) {
         Cat bob = new Cat();
-       Assert.assertEquals(expRes, bob.catWeight(weight, food), 0.0);
+        Assert.assertEquals(expRes, bob.catWeight(weight, food), 0.0);
     }
     @Test
     public void badMoodTest() {
