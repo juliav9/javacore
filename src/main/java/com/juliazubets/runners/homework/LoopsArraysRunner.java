@@ -8,8 +8,8 @@ import java.util.Scanner;
  * Created by julia on 10/24/2016.
  */
 public class LoopsArraysRunner {
+
     public static void main(String args[]) {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter number for task");
         System.out.println("1 - count sum of input numbers");
         System.out.println("2 - will display right aligned array");
@@ -24,48 +24,62 @@ public class LoopsArraysRunner {
         System.out.println("11 - will display outputs for you to analyze");
         System.out.println("12 - will display result of loop");
         System.out.println("14 - will decrease b till it will be the same as a");
+        System.out.println("Exit - to exit");
+        String[] taskMenu = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "14"};
 
-        System.out.println("Other value - exit");
+        Scanner scanner = new Scanner(System.in);
         String taskNumber = scanner.nextLine();
 
-        if (taskNumber.equals("1")) {
-            LoopsArrays.sumOfNumbers();
+        while (!taskNumber.equalsIgnoreCase("exit")) {
+                usersNumber(taskNumber);
+            taskNumber = scanner.nextLine();
         }
-        if (taskNumber.equals("2")) {
-            LoopsArrays.rightAlignedArray();
-        }
-        if (taskNumber.equals("3")) {
-            LoopsArrays.twoDimensionalArray();
-        }
-        if (taskNumber.equals("4")) {
-            LoopsArrays.minMaxArray();
-        }
-        if (taskNumber.equals("5")) {
-            LoopsArrays.countEvenNumbersInArray();
-        }
-        if (taskNumber.equals("6")) {
-            LoopsArrays.viceVersaOddArray();
-        }
-        if (taskNumber.equals("7")) {
+    }
+
+    public static void usersNumber(String taskNumber) {
+        switch (taskNumber) {
+            case "1":
+                LoopsArrays.sumOfNumbers();
+                break;
+
+            case "2":
+                LoopsArrays.rightAlignedArray();
+                break;
+            case "3":
+                LoopsArrays.twoDimensionalArray();
+                break;
+            case "4":
+                LoopsArrays.minMaxArray();
+                break;
+            case "5":
+                LoopsArrays.countEvenNumbersInArray();
+                break;
+            case "6":
+                LoopsArrays.viceVersaOddArray();
+                break;
+            case "7":
                 LoopsArrays.evenArray();
-        }
-        if (taskNumber.equals("8")) {
-            Counter.justIntArray();
-        }
-        if (taskNumber.equals("9")) {
-            Counter.justBooleanArray();
-        }
-        if (taskNumber.equals("10")) {
-            Counter.enevNumbersCounter();
-        }
-        if (taskNumber.equals("11")) {
-            Counter.analiseOutputs();
-        }
-        if (taskNumber.equals("12")) {
-            Counter.justTenNumbers();
-        }
-        if (taskNumber.equals("14")) {
-            Counter.loopManipulations();
+                break;
+            case "8":
+                Counter.justIntArray();
+                break;
+            case "9":
+                Counter.justBooleanArray();
+                break;
+            case "10":
+                Counter.enevNumbersCounter();
+                break;
+            case "11":
+                Counter.analiseOutputs();
+                break;
+            case "12":
+                Counter.justTenNumbers();
+                break;
+            case "14":
+                Counter.loopManipulations();
+                break;
+
+            default: System.out.println("Enter one of declared number for task or exit");
         }
     }
 }
