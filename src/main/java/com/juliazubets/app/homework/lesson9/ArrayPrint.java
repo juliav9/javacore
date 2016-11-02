@@ -8,9 +8,8 @@ import java.util.Arrays;
 public class ArrayPrint {
 
     public static void toPrintArray(int[] numbers) {
-        String myString = Arrays.toString(numbers);
-
-        System.out.println(myString);
-
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.print(numbers[i] + " ");
+        }
     }
 }
