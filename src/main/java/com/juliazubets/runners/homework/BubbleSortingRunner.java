@@ -24,8 +24,10 @@ public class BubbleSortingRunner {
         }
         ArrayPrint.toPrintArray(numbers);
         System.out.println();
+
         BubbleSorting.BubbleSortMaxToMin(numbers);
         ArrayPrint.toPrintArray(numbers);
+
         System.out.println("");
         BubbleSorting.BubbleSortMinToMax(numbers);
         ArrayPrint.toPrintArray(numbers);

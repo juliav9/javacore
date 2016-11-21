@@ -17,9 +17,7 @@ import java.util.Arrays;
             BubbleSorting mybubble = new BubbleSorting();
             int [] expArray = {2, 1};
             int [] numbers = {1, 2};
-            String numbersString = Arrays.toString(mybubble.BubbleSortMaxToMin(numbers));
-            String expString = Arrays.toString(expArray);
-            Assert.assertEquals(expString, numbersString);
+            Assert.assertArrayEquals(expArray, mybubble.BubbleSortMaxToMin(numbers));
         }
 
     @Test
