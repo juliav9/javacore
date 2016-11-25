@@ -6,7 +6,7 @@ package com.juliazubets.app.classwork.lesson15;
 
     public class Person {
 
-    protected String name;
+    private String name;
 
     public Person(String name) {
         this.name = name;
@@ -16,7 +16,9 @@ package com.juliazubets.app.classwork.lesson15;
         return "My answer is " + question;
     }
 
-
+    public String getName(){
+        return name;
+    }
 
     public static void main(String args[]) {
         Person p = new Person("Juli");

@@ -7,7 +7,7 @@ import java.util.Scanner;
 /**
  * Created by julia on 10/24/2016.
  */
-public class LoopsArraysRunner {
+public class Lesson7Runner {
 
     public static void main(String args[]) {
         System.out.println("Enter number for task");
