@@ -19,7 +19,7 @@ public class Lesson5Runner {
 
         switch (taskNumber) {
             case "1":
-                //if (taskNumber == '1') {
+                //if (TaskNumber == '1') {
                 System.out.println("Enter A length:");
                 double A = scanner.nextDouble();
                 System.out.println("Enter B length:");
@@ -34,7 +34,7 @@ public class Lesson5Runner {
                 break;
 
             case "2":
-                //else if (taskNumber == '2') {
+                //else if (TaskNumber == '2') {
                 System.out.println("Please enter a radius");
                 double radius = scanner.nextDouble();
                 Calculator.calculateCircleArea(radius);
@@ -42,7 +42,7 @@ public class Lesson5Runner {
                 break;
 
             case "3":
-                //else if (taskNumber == '3') {
+                //else if (TaskNumber == '3') {
                 System.out.println("Enter area1:");
                 double area1 = scanner.nextDouble();
                 System.out.println("Enter area2:");
@@ -58,7 +58,7 @@ public class Lesson5Runner {
                 break;
 
             case "4":
-                //else if (taskNumber == '4') {
+                //else if (TaskNumber == '4') {
                 System.out.println("Enter number");
                 int number = scanner.nextInt();
                 if (Calculator.isOdd(number)) {

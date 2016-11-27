@@ -4,7 +4,7 @@ package com.juliazubets.app.homework.lesson12;
  * Created by Julia Zubets on 11/18/2016.
  */
 public class EnigmaCaesar {
-    static String plainText = "0123456789ABCDEFGHIJKLMNOPRSTUVWXYZabcdefghijklmnopqrstuvwxyz ";
+    static String plainText = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ";
     static String cyperText = "QWERTYUIOPqwertyuiopASDFGHJKL 12345sadfghjklZXCVBNM67890zxcvbnm";
     static int caesarShift = 5;
 

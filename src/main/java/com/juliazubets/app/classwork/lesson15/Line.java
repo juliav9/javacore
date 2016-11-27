@@ -16,7 +16,7 @@ public class Line {
         for (int i = 0; i < line.length; i++) {
             newLine[i] = line[i];
         }
-        
+
         newLine[newLine.length - 1] = pix;
         line = newLine;
     }
