@@ -2,6 +2,7 @@ package com.juliazubets.runners.homework;
 
 import com.juliazubets.app.classwork.lesson7.Counter;
 import com.juliazubets.app.classwork.lesson7.LoopsArrays;
+
 import java.util.Scanner;
 
 /**
@@ -25,19 +26,25 @@ public class Lesson7Runner {
         System.out.println("l - will display result of loop");
         System.out.println("m - will decrease b till it will be the same as a");
         System.out.println("Exit - to exit");
-        //String[] taskMenu = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "14"};
 
         Scanner scanner = new Scanner(System.in);
         String taskNumber = scanner.nextLine();
 
-        TaskNumber task = null;
+        while (!taskNumber.equalsIgnoreCase("exit")) {
 
-        try {
-            task = TaskNumber.valueOf(taskNumber);
-        } catch (IllegalArgumentException e) {
-            System.out.println("Invalid task selection!");
-            System.exit(0);
+            try {
+                TaskNumber task = TaskNumber.valueOf(taskNumber);
+                usersNumber(task);
+
+            } catch (IllegalArgumentException e) {
+                System.out.println("Enter one of declared number for task");
+            }
+
+            taskNumber = scanner.nextLine();
         }
+    }
+
+    public static void usersNumber(TaskNumber task) {
 
         switch (task) {
             case a:
@@ -80,10 +87,9 @@ public class Lesson7Runner {
             case m:
                 Counter.loopManipulations();
                 break;
-
-
         }
     }
-
 }
+
+
 
