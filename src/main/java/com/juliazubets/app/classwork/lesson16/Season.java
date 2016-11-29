@@ -9,7 +9,7 @@ public enum Season {
     WINTER, SPRING, SUMMER, AUTUMN;
 
     public static void main(String args[]) {
-        try { Season season = Season.valueOf ("SPRING");
+        try { Season season = Season.valueOf("SPRING");
 // Exception if not in list
             switch (season) {
                 case SPRING:

@@ -11,75 +11,79 @@ public class Lesson7Runner {
 
     public static void main(String args[]) {
         System.out.println("Enter number for task");
-        System.out.println("1 - count sum of input numbers");
-        System.out.println("2 - will display right aligned array");
-        System.out.println("3 - will display two dimensional array");
-        System.out.println("4 - will display array and its min and max values");
-        System.out.println("5 - will display array show number of even elements in it");
-        System.out.println("6 - will display array and its vice versa version");
-        System.out.println("7 - will display array of even numbers");
-        System.out.println("8 - will display just little integer array");
-        System.out.println("9 - will display just little boolean array");
-        System.out.println("10 - will count even numbers in array");
-        System.out.println("11 - will display outputs for you to analyze");
-        System.out.println("12 - will display result of loop");
-        System.out.println("14 - will decrease b till it will be the same as a");
+        System.out.println("a - count sum of input numbers");
+        System.out.println("b - will display right aligned array");
+        System.out.println("c - will display two dimensional array");
+        System.out.println("d - will display array and its min and max values");
+        System.out.println("e - will display array show number of even elements in it");
+        System.out.println("f - will display array and its vice versa version");
+        System.out.println("g - will display array of even numbers");
+        System.out.println("h - will display just little integer array");
+        System.out.println("i - will display just little boolean array");
+        System.out.println("j - will count even numbers in array");
+        System.out.println("k - will display outputs for you to analyze");
+        System.out.println("l - will display result of loop");
+        System.out.println("m - will decrease b till it will be the same as a");
         System.out.println("Exit - to exit");
-        String[] taskMenu = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "14"};
+        //String[] taskMenu = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "14"};
 
         Scanner scanner = new Scanner(System.in);
         String taskNumber = scanner.nextLine();
 
-        while (!taskNumber.equalsIgnoreCase("exit")) {
-                usersNumber(taskNumber);
-            taskNumber = scanner.nextLine();
-        }
-    }
+        TaskNumber task = null;
 
-    public static void usersNumber(String taskNumber) {
-        switch (taskNumber) {
-            case "1":
+        try {
+            task = TaskNumber.valueOf(taskNumber);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Invalid task selection!");
+            System.exit(0);
+        }
+
+        switch (task) {
+            case a:
                 LoopsArrays.sumOfNumbers();
                 break;
 
-            case "2":
+            case b:
                 LoopsArrays.rightAlignedArray();
                 break;
-            case "3":
+            case c:
                 LoopsArrays.twoDimensionalArray();
                 break;
-            case "4":
+            case d:
                 LoopsArrays.minMaxArray();
                 break;
-            case "5":
+            case e:
                 LoopsArrays.countEvenNumbersInArray();
                 break;
-            case "6":
+            case f:
                 LoopsArrays.viceVersaOddArray();
                 break;
-            case "7":
+            case g:
                 LoopsArrays.evenArray();
                 break;
-            case "8":
+            case h:
                 Counter.justIntArray();
                 break;
-            case "9":
+            case i:
                 Counter.justBooleanArray();
                 break;
-            case "10":
+            case j:
                 Counter.enevNumbersCounter();
                 break;
-            case "11":
+            case k:
                 Counter.analiseOutputs();
                 break;
-            case "12":
+            case l:
                 Counter.justTenNumbers();
                 break;
-            case "14":
+            case m:
                 Counter.loopManipulations();
                 break;
 
-            default: System.out.println("Enter one of declared number for task or exit");
+
         }
     }
+
 }
+

@@ -7,24 +7,28 @@ public enum Holidays {
     NEW_YEAR(1, "January", "New Year"), DATE_OF_BIRTH(17, "October", "Birth"), WOMAN_DAY(8,"March", "Woman_Day");
 
     private int date;
-    private String month;
     private String holidayName;
+    private String month;
+
 
     private Holidays(int date, String month, String holidayName) {
-
         this.date = date;
         this.month = month;
         this.holidayName = holidayName;
     }
-    public int getValue()
+    public int getDate()
     { return date; }
 
     public String getMonth()
-    { return month; }
+    {return month; }
+
+
+    public String gethd()
+    { return holidayName; }
 
     public static void main(String args[]) {
         for (Holidays cName : Holidays.values()) {
-            System.out.println("Holiday Date: " + cName.getValue()+ " - Holiday Name: " + cName+ " - Holiday Month: " + cName.getMonth());
+            System.out.println("Holiday Date: " + cName.getDate() + " - Holiday Month: " + cName.getMonth() + " - Holiday Name: " + cName.gethd());
         }
     }
 

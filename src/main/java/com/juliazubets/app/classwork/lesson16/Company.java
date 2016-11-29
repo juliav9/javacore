@@ -6,6 +6,7 @@ package com.juliazubets.app.classwork.lesson16;
 public enum Company {
 
     EBAY(30,"Ebay Inc"), GOOGLE(15,"Google Inc");
+
     private int value;
     private String fullName;
 

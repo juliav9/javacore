@@ -10,15 +10,23 @@ public class Lesson5Runner {
     public static void main(String args[]) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter number for task");
-        System.out.println("1 - right angle triangle");
-        System.out.println("2 - calculate circle area");
-        System.out.println("3 - calculate what area is bigger");
-        System.out.println("4 - define if number is even or odd");
+        System.out.println("a - right angle triangle");
+        System.out.println("b - calculate circle area");
+        System.out.println("c - calculate what area is bigger");
+        System.out.println("d - define if number is even or odd");
         System.out.println("Other value - exit");
         String taskNumber = scanner.nextLine();
 
-        switch (taskNumber) {
-            case "1":
+        TaskNumber task = null;
+        try {
+            task = TaskNumber.valueOf(taskNumber);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Invalid task selection!");
+            System.exit(0);
+        }
+
+        switch (task) {
+            case a:
                 //if (TaskNumber == '1') {
                 System.out.println("Enter A length:");
                 double A = scanner.nextDouble();
@@ -33,7 +41,7 @@ public class Lesson5Runner {
                 }
                 break;
 
-            case "2":
+            case b:
                 //else if (TaskNumber == '2') {
                 System.out.println("Please enter a radius");
                 double radius = scanner.nextDouble();
@@ -41,7 +49,7 @@ public class Lesson5Runner {
 
                 break;
 
-            case "3":
+            case c:
                 //else if (TaskNumber == '3') {
                 System.out.println("Enter area1:");
                 double area1 = scanner.nextDouble();
@@ -57,7 +65,7 @@ public class Lesson5Runner {
                 }
                 break;
 
-            case "4":
+            case d:
                 //else if (TaskNumber == '4') {
                 System.out.println("Enter number");
                 int number = scanner.nextInt();
@@ -67,8 +75,6 @@ public class Lesson5Runner {
                 System.out.println("The number is odd");
                 break;
 
-            default:
-                System.exit(0);
         }
     }
 }
