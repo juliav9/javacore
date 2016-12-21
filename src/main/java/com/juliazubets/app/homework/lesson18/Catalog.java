@@ -12,24 +12,26 @@ public class Catalog {
     public void readFromFile(String fileName) {
         String line;
         try {
-
             BufferedReader br = new BufferedReader(new FileReader(fileName));
             while ((line = br.readLine()) != null) {
                 String[] person = line.split(",");
 
-                for (EmployeeType et : EmployeeType.values()) {
+                EmployeeType[] employeeTypes = EmployeeType.values();
+                StudentType[] studentTypes = StudentType.values();
+
+                for (EmployeeType et : employeeTypes) {
                     if (et.name().equals(person[0])) {
-                        Employee emploee = new Employee();
-                        emploee.position = et;
-                        emploee.name = person[1];
-                        emploee.familyName = person[2];
-                        emploee.faculty = person[3];
-                        all.add(emploee);
+                        Employee employee = new Employee();
+                        employee.position = et;
+                        employee.name = person[1];
+                        employee.familyName = person[2];
+                        employee.faculty = person[3];
+                        all.add(employee);
                         break;
                     }
                 }
 
-                for (StudentType st : StudentType.values()) {
+                for (StudentType st : studentTypes) {
                     if (st.name().equals(person[0])) {
                         Student student = new Student();
                         student.status = st;
@@ -47,36 +49,15 @@ public class Catalog {
         }
     }
 
-    public Person[] find(int type, String searchText) {
+    public <T extends Person> Person[] search(Class<T> type, String searchText) {
         ArrayList<Person> result = new ArrayList<>();
-        switch (type) {
-            case 1:
-                for (Person p : all) {
-                    if (p.familyName.contains(searchText) || p.name.contains(searchText)) {
-                        result.add(p);
-                    }
-                }
-                break;
-            case 2:
-                for (Person p : all) {
-                    if (Employee.class.isInstance(p) && (p.familyName.contains(searchText) || p.name.contains(searchText) || p.faculty.contains(searchText))) {
-                        result.add(p);
-                    }
-                }
-                break;
-            case 3:
-                for (Person p : all) {
-                    if (Student.class.isInstance(p)) {
-                        Student s = (Student) p;
-                        if (s.familyName.contains(searchText) || s.name.contains(searchText) || s.faculty.contains(searchText) || Integer.toString(s.course).equals(searchText)) {
-                            result.add(p);
-                        }
-                    }
-                }
-                break;
+        for (Person p : all) {
+            if (type.isInstance(p) && p.equal(searchText)) {
+                result.add(p);
+            }
         }
 
-        Person[] personArr = new Person[result.size()];
-        return result.toArray(personArr);
+        Person[] resultArr = new Person[result.size()];
+        return result.toArray(resultArr);
     }
 }

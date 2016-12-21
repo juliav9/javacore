@@ -19,32 +19,48 @@ public class Runner {
 
         String searchNumber = scanner.nextLine();
 
-        System.out.println("Enter text for sarch");
+        System.out.println("Enter text for search");
         String searchText = scanner.nextLine();
 
-        Person[] result;
         switch (searchNumber) {
             case "1":
-                result = catalog.find(1, searchText);
+                Print(catalog.search(Person.class, searchText), true);
                 break;
 
             case "2":
-                result = catalog.find(2, searchText);
+                Person[] resultArr = catalog.search(Employee.class, searchText);
+                Print(resultArr);
                 break;
 
             case "3":
-                result = catalog.find(3, searchText);
+                Print(catalog.search(Student.class, searchText));
                 break;
 
             case "exit":
                 break;
 
             default:
-                System.out.println("Please enter correct number of search");
+                System.out.println("Please enter correct number for search");
+        }
+  }
+
+    private static void Print(Person[] result) {
+        Print(result, false);
+    }
+
+    private static void Print(Person[] result, boolean baseOnly) {
+        if (result.length == 0) {
+            System.out.println("Nothing found.");
+            return;
         }
 
-
-
-
-  }
+        for (Person p : result) {
+            if (baseOnly) {
+                System.out.println(p.familyName + " " + p.name);
+            }
+            else {
+                System.out.println(p.toString());
+            }
+        }
+    }
 }

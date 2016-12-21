@@ -10,4 +10,9 @@ public class Employee extends Person {
     public boolean equal(String searchText) {
         return super.equal(searchText) || faculty.contains(searchText);
     }
+
+    @Override
+    public String toString() {
+        return familyName + " " + name + " " + faculty + " " + position;
+    }
 }

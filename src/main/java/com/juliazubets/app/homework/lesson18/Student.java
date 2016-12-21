@@ -11,4 +11,9 @@ public class Student extends Person {
     public boolean equal(String searchText) {
         return super.equal(searchText) || faculty.contains(searchText) || Integer.toString(course).equals(searchText);
     }
+
+    @Override
+    public String toString() {
+        return familyName + " " + name + " " + faculty + " " + course + " " + status;
+    }
 }
