@@ -22,6 +22,16 @@ public class AddProjectAsEntrepreneurStepTwoPage extends AbstractPage{
 
     public void selectBusinessForSale() {
 
+<<<<<<< HEAD
+        WebElement buttonRadio = driver.findElement(radiobutton);
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        js.executeScript("arguments[0].scrollIntoView(true);", buttonRadio);
+
+        Actions actions = new Actions(driver);
+        actions.moveToElement(buttonRadio).click().perform();
+=======
         WebElement radioButton = driver.findElement(radiobutton);
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -30,6 +40,7 @@ public class AddProjectAsEntrepreneurStepTwoPage extends AbstractPage{
 
         Actions actions = new Actions(driver);
         actions.moveToElement(radioButton).click().perform();
+>>>>>>> my_new_branch
         //boolean result = radioBtn.isSelected();
 
 
