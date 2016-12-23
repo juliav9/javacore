@@ -22,14 +22,14 @@ public class AddProjectAsEntrepreneurStepTwoPage extends AbstractPage{
 
     public void selectBusinessForSale() {
 
-        WebElement radioBtn = driver.findElement(radiobutton);
+        WebElement radioButton = driver.findElement(radiobutton);
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
-        js.executeScript("arguments[0].scrollIntoView(true);", radioBtn);
+        js.executeScript("arguments[0].scrollIntoView(true);", radioButton);
 
         Actions actions = new Actions(driver);
-        actions.moveToElement(radioBtn).click().perform();
+        actions.moveToElement(radioButton).click().perform();
         //boolean result = radioBtn.isSelected();
 
 
