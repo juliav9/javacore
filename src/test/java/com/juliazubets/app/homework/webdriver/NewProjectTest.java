@@ -43,6 +43,4 @@ public class NewProjectTest {
     public void tearDown() throws Exception {
         driver.quit();
     }
-
-
 }
