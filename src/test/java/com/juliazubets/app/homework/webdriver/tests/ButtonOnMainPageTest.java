@@ -1,4 +1,4 @@
-package com.juliazubets.app.homework.webdriver;
+package com.juliazubets.app.homework.webdriver.tests;
 
 import org.junit.After;
 import org.junit.Assert;
@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * Created by Julia Zubets on 12/20/2016.
  */
-public class FirstTest {
+public class ButtonOnMainPageTest {
     private WebDriver driver;
     private String baseUrl;
 

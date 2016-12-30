@@ -1,4 +1,4 @@
-package com.juliazubets.app.homework.webdriver;
+package com.juliazubets.app.homework.webdriver.tests;
 
 import org.junit.After;
 import org.junit.Assert;
@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * Created by Julia Zubets on 12/20/2016.
  */
-public class NewProjectTest {
+public class NewProjectButtonTest {
     private WebDriver driver;
     private String baseUrl;
     private By searchButton;
@@ -26,8 +26,7 @@ public class NewProjectTest {
         driver = new FirefoxDriver();
         baseUrl = "https://dev.equerest.com/";
         searchButton = By.xpath(".//*[@id='banner']//a");
-        nextStepButton = By.xpath(".//*[@id='entrepreneur-register-form']//button");
-        //searchPassword = By.id("password");
+        nextStepButton = By.xpath(".//*[@id='entrepreneur-equerest-form']//button");
     }
 
     @Test

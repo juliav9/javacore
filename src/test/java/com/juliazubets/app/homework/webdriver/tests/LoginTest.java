@@ -1,4 +1,4 @@
-package com.juliazubets.app.homework.webdriver;
+package com.juliazubets.app.homework.webdriver.tests;
 
 import org.junit.After;
 import org.junit.Assert;
@@ -31,7 +31,7 @@ public class LoginTest {
 
     @Test
     public void myDropdownCatalogTest() throws InterruptedException {
-        driver.get(baseUrl + "register#/");
+        driver.get(baseUrl + "equerest#/");
         WebElement searchInput = driver.findElement(searchEmail);
         searchInput.sendKeys("ss@s.ss");
         WebElement searchInput2 = driver.findElement(searchPassword);

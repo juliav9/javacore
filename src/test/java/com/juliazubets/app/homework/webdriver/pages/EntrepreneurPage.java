@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
  */
 public class EntrepreneurPage extends AbstractPage{
     public static final String URL = BASE_URL + "info/entrepreneur";
-    private static final By ADD_PROJECT_BUTTON = By.xpath("//*[@href = \"/register#/entrepreneur\"]");
+    private static final By ADD_PROJECT_BUTTON = By.xpath("//*[@href = \"/equerest#/entrepreneur\"]");
 
     public EntrepreneurPage(WebDriver driver){
         super(driver, URL);

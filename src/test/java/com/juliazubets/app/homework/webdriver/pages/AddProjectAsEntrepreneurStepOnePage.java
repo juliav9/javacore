@@ -2,8 +2,11 @@ package com.juliazubets.app.homework.webdriver.pages;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * Created by Julia Zubets on 12/23/2016.
@@ -23,7 +26,10 @@ public class AddProjectAsEntrepreneurStepOnePage extends AbstractPage {
     }
 
     public AddProjectAsEntrepreneurStepOnePage fillField(By name, String text) {
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(name));
         WebElement webElement = driver.findElement(name);
+        scrollTo(driver.findElement(name));
         webElement.clear();
         webElement.sendKeys(text);
         Assert.assertEquals(text, driver.findElement(name).getAttribute("value"));

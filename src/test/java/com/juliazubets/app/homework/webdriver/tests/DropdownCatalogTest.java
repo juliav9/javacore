@@ -1,4 +1,4 @@
-package com.juliazubets.app.homework.webdriver;
+package com.juliazubets.app.homework.webdriver.tests;
 
 import org.junit.After;
 import org.junit.Assert;
