@@ -22,7 +22,7 @@ public class AddProjectAsEntrepreneurTests extends BaseTest {
                 .fillField(refs.email, "test@mail.ru")
                 .fillField(refs.password, "Dev12345")
                 .clickOnGoToStep2();
-        addProjectAsEntrepreneurStepOnePage.assertValidationMessage("Пользователь с таким e-mail уже зарегестрированj.");
+        addProjectAsEntrepreneurStepOnePage.assertValidationMessage("Пользователь с таким e-mail уже зарегестрирован.");
     }
 
 }

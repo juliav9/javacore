@@ -14,8 +14,8 @@ import java.util.List;
 /**
  * Created by Julia Zubets on 12/20/2016.
  */
-public class LoginTest {
-    private WebDriver driver;
+public class LoginTest extends BaseTest {
+
     private String baseUrl;
     private By searchEmail;
     private By searchPassword;
@@ -23,7 +23,7 @@ public class LoginTest {
 
     @Before
     public void setup() {
-        driver = new FirefoxDriver();
+        //driver = new FirefoxDriver();
         baseUrl = "https://dev.equerest.com/";
         searchEmail = By.id("email");
         searchPassword = By.id("password");
@@ -31,11 +31,11 @@ public class LoginTest {
 
     @Test
     public void myDropdownCatalogTest() throws InterruptedException {
-        driver.get(baseUrl + "equerest#/");
+        driver.get(baseUrl + "register#");
         WebElement searchInput = driver.findElement(searchEmail);
-        searchInput.sendKeys("ss@s.ss");
+        searchInput.sendKeys("AntonGavrilov90@mail.ua");
         WebElement searchInput2 = driver.findElement(searchPassword);
-        searchInput2.sendKeys("12345678Q");
+        searchInput2.sendKeys("Qwerty123");
         searchInput.submit();
         Thread.sleep(7000);
         List<WebElement> linkList = driver.findElements(By.xpath("//div[@class='title']/h1/span"));

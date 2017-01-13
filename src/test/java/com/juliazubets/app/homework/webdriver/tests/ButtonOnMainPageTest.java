@@ -14,15 +14,16 @@ import java.util.List;
 /**
  * Created by Julia Zubets on 12/20/2016.
  */
-public class ButtonOnMainPageTest {
-    private WebDriver driver;
-    private String baseUrl;
+public class ButtonOnMainPageTest extends BaseTest {
 
-    @Before
-    public void setup() {
-        driver = new FirefoxDriver();
-        baseUrl = "https://dev.equerest.com/";
-        }
+
+    private String baseUrl = "https://dev.equerest.com/";
+
+    //@Before
+    //public void setup() {
+        //driver = new FirefoxDriver();
+
+        //}
 
     @Test
     public void myFirstTest(){
@@ -37,9 +38,9 @@ public class ButtonOnMainPageTest {
         Assert.assertTrue(linkList.get(0).getText().contains("Подать проект"));
     }
 
-    @After
-    public void tearDown() throws Exception {
-        driver.quit();
-    }
+    //@After
+    //public void tearDown() throws Exception {
+        //driver.quit();
+    //}
 }
 

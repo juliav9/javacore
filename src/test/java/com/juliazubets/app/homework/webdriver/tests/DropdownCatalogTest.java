@@ -15,8 +15,8 @@ import java.util.List;
 /**
  * Created by Julia Zubets on 12/20/2016.
  */
-public class DropdownCatalogTest {
-    private WebDriver driver;
+public class DropdownCatalogTest extends BaseTest {
+
     private String baseUrl;
     private By searchProject;
     private By searchStage;
@@ -24,7 +24,7 @@ public class DropdownCatalogTest {
 
     @Before
     public void setup() {
-        driver = new FirefoxDriver();
+        //river = new FirefoxDriver();
         baseUrl = "https://dev.equerest.com/";
         searchProject = By.id("filter-selector");
         searchStage = By.id("filter-stage");

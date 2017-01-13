@@ -53,6 +53,7 @@ public class AddProjectAsEntrepreneurStepTwoPage extends AbstractPage {
         driver.findElement(endRegistrationButton).click();
         WebElement myProjectButton = driver.findElement(searchButton);
         Assert.assertTrue(myProjectButton.getText().contains("Мой проект"));
+        myProjectButton.click();
         return new AddProjectAsEntrepreneurStepTwoPage(driver);
     }
 }
